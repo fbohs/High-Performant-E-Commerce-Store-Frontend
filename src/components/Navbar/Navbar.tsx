@@ -1,7 +1,7 @@
 import { Logo } from '@/components/atoms/Logo'
-import { CartIconButton } from '@/components/molecules/CartIconButton'
-import { CountrySelector } from '@/components/molecules/CountrySelector'
-import { SearchBar } from '@/components/molecules/SearchBar'
+import { CartIconButton } from '@/components/Navbar/CartIconButton'
+import { CountrySelector } from '@/components/Navbar/CountrySelector'
+import { SearchBar } from '@/components/Navbar/SearchBar'
 
 export const Navbar: React.FC = () => (
   <header className="sticky top-0 z-50 bg-slate-900 text-white shadow-sm">

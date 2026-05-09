@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import ShoppingBagIcon from '@mui/icons-material/ShoppingBag'
 import { FOOTER_SECTIONS, LEGAL_LINKS } from '@/constants/footerNav'
-import { FooterLinkColumn } from '@/components/molecules/FooterLinkColumn'
-import { NewsletterSignup } from '@/components/molecules/NewsletterSignup'
-import { PaymentMethods } from '@/components/molecules/PaymentMethods'
-import { SocialLinks } from '@/components/molecules/SocialLinks'
+import { FooterLinkColumn } from '@/components/Footer/FooterLinkColumn'
+import { NewsletterSignup } from '@/components/Footer/NewsletterSignup'
+import { PaymentMethods } from '@/components/Footer/PaymentMethods'
+import { SocialLinks } from '@/components/Footer/SocialLinks'
 
 export const Footer: React.FC = () => {
   const year = new Date().getFullYear()

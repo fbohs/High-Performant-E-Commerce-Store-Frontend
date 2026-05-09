@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Roboto } from 'next/font/google'
-import { Footer } from '@/components/organisms/Footer'
-import { Navbar } from '@/components/organisms/Navbar'
+import { Footer } from '@/components/Footer/Footer'
+import { Navbar } from '@/components/Navbar/Navbar'
 import { ThemeRegistry } from '@/lib/ThemeRegistry'
 import './globals.css'
 

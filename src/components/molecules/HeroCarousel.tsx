@@ -13,7 +13,7 @@ interface HeroCarouselProps {
 
 export const HeroCarousel: React.FC<HeroCarouselProps> = ({
   slides,
-  autoPlayMs = 6000,
+  autoPlayMs = 3000,
 }) => {
   const trackRef = useRef<HTMLDivElement>(null)
   const [activeIndex, setActiveIndex] = useState(0)
@@ -155,9 +155,8 @@ export const HeroCarousel: React.FC<HeroCarouselProps> = ({
             >
               <span
                 aria-hidden
-                className={`h-2.5 rounded-full transition-all ${
-                  isActive ? 'w-6 bg-white' : 'w-2.5 bg-white/60 hover:bg-white/90'
-                }`}
+                className={`h-2.5 rounded-full transition-all ${isActive ? 'w-6 bg-white' : 'w-2.5 bg-white/60 hover:bg-white/90'
+                  }`}
               />
             </button>
           )
