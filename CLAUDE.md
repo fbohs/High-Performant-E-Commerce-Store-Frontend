@@ -103,11 +103,10 @@ src/
 │   ├── page.tsx          # Home route
 │   ├── globals.css       # Tailwind v4 entry + global styles
 │   └── (feature)/        # Route groups per feature
-├── components/
-│   ├── atoms/            # Smallest visual primitives (Button wrappers, labels)
-│   ├── molecules/        # Compositions of atoms (form fields, cards)
-│   ├── organisms/        # Domain-aware sections (ProductGrid, CartDrawer)
-│   └── templates/        # Page-level layouts shared across routes
+├── components/           # Feature-grouped UI components
+│   ├── Navbar/           # index.tsx + helpers (Logo, SearchBar, CartIconButton, …)
+│   ├── Footer/           # index.tsx + helpers (FooterLinkColumn, NewsletterSignup, …)
+│   └── Hero/             # index.tsx + helpers (HeroCarousel, CategoryFilter, …)
 ├── features/             # Feature-scoped logic (user, auth, cart, checkout)
 ├── hooks/                # Reusable client hooks
 ├── stores/               # Zustand stores, one per domain
@@ -115,8 +114,10 @@ src/
 ├── lib/                  # Cross-cutting utilities (theme, ThemeRegistry, fetcher)
 ├── utils/                # Pure helpers
 ├── types/                # Shared TypeScript types
-└── constants/
+└── constants/            # Static data (countries, categories, hero slides, …)
 ```
+
+**Component organization.** Each public component lives in a PascalCase folder named after itself. The entry component is `index.tsx` so consumers import the bare folder path: `import { Navbar } from '@/components/Navbar'`. Helper subcomponents only used by that feature are colocated as siblings (`components/Navbar/Logo.tsx`, etc.). When a helper is reused across two features, lift it to its own folder under `components/`. Avoid the atoms/molecules/organisms split; folder-by-feature scales better and keeps related code together.
 
 ### Server vs Client Components
 

@@ -16,7 +16,7 @@ export const useAppStore = create<AppState>()(
         theme: 'light',
         setTheme: (theme) => set({ theme }),
         toggleTheme: () =>
-          set((state) => ({ theme: state.theme === 'light' ? 'dark' : 'dark' })),
+          set((state) => ({ theme: state.theme === 'light' ? 'light' : 'dark' })),
       }),
       { name: 'app-storage' },
     ),

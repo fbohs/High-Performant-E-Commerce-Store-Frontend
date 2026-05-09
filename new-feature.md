@@ -1,0 +1,23 @@
+for user sections
+- it should be divided in 2 parts
+	- left side should have all the navigation links like
+		- Account
+			- it shows info like name, email, phone
+			- email cannot be changed by user
+			- phone is optional
+			- name is optional
+			- it has 2 button - edit and save changes
+			- by default edit button should be visible and save changes button should be hidden
+			- when user clicks on edit button, it should show save changes button and hide edit button
+			- when user clicks on save changes button, it should save the changes and show edit button and hide save changes button
+			- when user clicks on save changes button, it should show a loading button and hide edit button
+		- Orders
+			- by default it should show all the orders of the user
+		- Wishlist
+			- by default it should show all the wishlist of the user
+		- Address
+			- by default it should show all the address of the user
+	- right side should have the content of the selected link
+- currently it is not like that, currently when i click on account, it shows the account details, but i want it to show the account details when i click on account, and when i click on orders, it should show the orders details, and so on.
+- by default it should show the account details when i click on account
+- when user is not logged in, it should redirect to the login page

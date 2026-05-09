@@ -1,6 +1,8 @@
-import { Logo } from '@/components/atoms/Logo'
 import { CartIconButton } from '@/components/Navbar/CartIconButton'
 import { CountrySelector } from '@/components/Navbar/CountrySelector'
+import { Logo } from '@/components/Navbar/Logo'
+import { MobileNav } from '@/components/Navbar/MobileNav'
+import { NavAuth } from '@/components/Navbar/NavAuth'
 import { SearchBar } from '@/components/Navbar/SearchBar'
 
 export const Navbar: React.FC = () => (
@@ -10,10 +12,12 @@ export const Navbar: React.FC = () => (
       className="mx-auto max-w-7xl px-3 py-2 md:px-6 md:py-3"
     >
       <div className="flex flex-wrap items-center gap-x-3 gap-y-2 md:flex-nowrap md:gap-4">
+        <MobileNav />
         <Logo />
 
         <div className="order-1 ml-auto flex shrink-0 items-center gap-1 md:order-3 md:ml-0 md:gap-2">
           <CountrySelector />
+          <NavAuth />
           <CartIconButton />
         </div>
 
